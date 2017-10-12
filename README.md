@@ -1,7 +1,6 @@
 # The WCSim Docker app
 
 This repository contains a docker image based on CERN/SL6 distribution with root 5.34.36 and Geant4.10.1.p3 precompiled libraries.
-
 All the nuclear data files necessary for Geant4 are installed and the WCSim repository is checked out at branch **ODTesting** of my fork.
 
 ## Instructions to install and run the image
@@ -10,7 +9,7 @@ All the nuclear data files necessary for Geant4 are installed and the WCSim repo
 1. Install docker on your machine.
 
 To run containers and use docker you **must** have root access to you local machine. So be sure you can.
-The best way install docker is to check directly the docker website, [here](https://www.docker.com/). However there is some info for the common used system :
+The best way install to docker is to check how directly the docker website, [here](https://www.docker.com/). However there is some info for the most common used system :
 
 #### For Ubuntu/Mint/Debian based system
 ```bash
@@ -23,12 +22,13 @@ sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
 sudo pacman -S docker
 ```
 #### For MacOSX
-FYI, I am no mac user so I'd recommend to follow any other docs or tutorial you may find, for example you can get the .dmg [here](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac)
+I am no mac user so I'd recommend to follow any other docs or tutorial you may find.
+You can find on the docker docs the .dmg file  [here](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac).
 #### Windows
-Again I'd recommand to follow docker docs  [here](https://docs.docker.com/docker-for-windows/install/)
+Again I'd recommand to follow docker docs  [here](https://docs.docker.com/docker-for-windows/install/).
 
 ### Start the Docker Client service
-2. It depends which daemons manages your process :
+2. It depends which daemons manages your system processes :
 #### Systemd-Based Linux (Arch for example)
 ```bash
 sudo systemctl enable docker
@@ -44,9 +44,8 @@ $ service docker start
 
 ### Install WCSim app
 3. Get this image.
-
 ```bash
-git clone && cd
+git clone https://github.com/P3tru/WCSimDocker && cd WCSimDocker
 ```
 
 4. You will need the first time to build the image by running this command :
