@@ -9,7 +9,9 @@ All the nuclear data files necessary for Geant4 are installed and the WCSim repo
 1. Install docker on your machine.
 
 To run containers and use docker you **must** have root access to you local machine. So be sure you can.
-The best way install to docker is to check how directly the docker website, [here](https://www.docker.com/). However there is some info for the most common used system :
+The best way to install docker is to check how directly from the docker website, [here](https://www.docker.com/).
+
+However there is some info for the most common used system :
 
 #### For Ubuntu/Mint/Debian based system
 ```bash
@@ -60,6 +62,7 @@ Anytime you pull new commit from this repository you **must** rebuild the docker
 sudo docker run -ti WCSim
 ```
 You will reach a prompt inside your container and you can now use it as a normal terminal.
+**Starting from now the following commands are run inside the docker image :**
 
 6. Source the environment file setting up root and geant4 :
 ```bash
