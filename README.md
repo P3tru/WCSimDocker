@@ -34,6 +34,7 @@ Again I'd recommand to follow docker docs  [here](https://docs.docker.com/docker
 #### Systemd-Based Linux (Arch for example)
 ```bash
 sudo systemctl enable docker
+sudo systemctl start docker
 ```
 #### Upstart-Based Linux (Ubuntu)
 ```bash
@@ -53,13 +54,13 @@ git clone https://github.com/P3tru/WCSimDocker && cd WCSimDocker
 4. You will need the first time to build the image by running this command :
 
 ```bash
-sudo docker build -t WCSim .
+sudo docker build -t wcsim .
 ```
 Anytime you pull new commit from this repository you **must** rebuild the docker image by using this command. Docker is clever and works with layers, so the first time you will build the image it might take a while to recover all the dependancies, but after only the new or modified layers would be build and will take less much time.
 
 5. Run your image by using this command :
 ```bash
-sudo docker run -ti WCSim
+sudo docker run -ti wcsim
 ```
 You will reach a prompt inside your container and you can now use it as a normal terminal.
 **Starting from now the following commands are run inside the docker image :**
