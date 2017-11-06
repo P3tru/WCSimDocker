@@ -33,6 +33,11 @@ RUN yum install -y \
     libXi-devel \
     expat-devel
 
+### Some utilities
+RUN yum install -y \
+    emacs \
+    vim
+
 ### Setup environment
 RUN mkdir /root/HyperK
 ENV HYPERKDIR /root/HyperK
@@ -104,7 +109,8 @@ ADD env-WCSim.sh $HYPERKDIR/
 RUN cd $HYPERKDIR \
     && git clone https://github.com/P3tru/WCSim \
     && cd $WCSIMDIR \
-    && git checkout -b ODTesting
+    && git checkout -b ODProd \
+    && git pull origin ODProd
 
 ### Open terminal
 CMD ["/bin/bash"]
