@@ -112,5 +112,13 @@ RUN cd $HYPERKDIR \
     && git checkout -b ODProd \
     && git pull origin ODProd
 
+### Volume definition for container
+RUN mkdir /root/HyperK/LinkToHost
+
+#VOLUME /root/HyperK/WCSim
+
 ### Open terminal
 CMD ["/bin/bash"]
+
+### Open SSH port
+EXPOSE 22
