@@ -1,7 +1,7 @@
 # The WCSim Docker app
 
 This repository contains a docker image based on CERN/SL6 distribution with root 5.34.36 and Geant4.10.1.p3 precompiled libraries.
-All the nuclear data files necessary for Geant4 are installed and the WCSim repository is checked out at branch **ODTesting** of my fork.
+All the nuclear data files necessary for Geant4 are installed and the WCSim repository is checked out at branch **ODProd** of my fork.
 
 ## Instructions to install and run the image
 
@@ -62,7 +62,15 @@ Anytime you pull new commit from this repository you **must** rebuild the docker
 ```bash
 sudo docker run -ti wcsim
 ```
-You will reach a prompt inside your container and you can now use it as a normal terminal.
+
+Be aware that container are encapsulated from your host system.
+If you want to link a directory from the host to the container, you can run the docker image by using :
+```bash
+sudo docker run -v /path/on/your/computer/:/root/HyperK/LinkToHost -ti wcsim
+```
+Then, you /path/on/your/computer/ will be read on the the /root/HyperK/LinkToHost directory of the container.
+
+When you run the image, you will reach a prompt inside your container and you can now use it as a normal terminal.
 **Starting from now the following commands are run inside the docker image :**
 
 6. Source the environment file setting up root and geant4 :
@@ -86,3 +94,9 @@ And execute WCSim with :
 WCSim macros/OD.mac
 ```
 Or whatever macros you want. Please check the [WCSim](https://github.com/WCSim/WCSim) repository for any information you need on compiling and generating simulation files.
+
+### ROOT BONUS
+If you want to run ROOT inside the container, there is no graphical interface so you have to use this hack to process your batch script :
+```bash
+export DISPLAY=:0
+```
