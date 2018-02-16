@@ -27,7 +27,7 @@ sudo pacman -S docker
 I am no mac user so I'd recommend to follow any other docs or tutorial you may find.
 You can find on the docker docs the .dmg file  [here](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac).
 #### Windows
-Again I'd recommand to follow docker docs  [here](https://docs.docker.com/docker-for-windows/install/).
+Again I'd recommend to follow docker docs  [here](https://docs.docker.com/docker-for-windows/install/).
 
 ### Start the Docker Client service
 2. It depends which daemons manages your system processes :
@@ -56,7 +56,7 @@ git clone https://github.com/P3tru/WCSimDocker && cd WCSimDocker
 ```bash
 sudo docker build -t wcsim .
 ```
-Anytime you pull new commit from this repository you **must** rebuild the docker image by using this command. Docker is clever and works with layers, so the first time you will build the image it might take a while to recover all the dependancies, but after only the new or modified layers would be build and will take less much time.
+Anytime you pull new commit from this repository you **must** rebuild the docker image by using this command. Docker is clever and works with layers, so the first time you will build the image it might take a while to recover all the dependencies, but after only the new or modified layers would be build and will take less much time.
 
 5. Run your image by using this command :
 ```bash

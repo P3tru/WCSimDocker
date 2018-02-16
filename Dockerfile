@@ -109,8 +109,8 @@ ADD env-WCSim.sh $HYPERKDIR/
 RUN cd $HYPERKDIR \
     && git clone https://github.com/P3tru/WCSim \
     && cd $WCSIMDIR \
-    && git checkout -b ODProd \
-    && git pull origin ODProd
+    && git checkout -b prod/OD \
+    && git pull origin prod/OD
 
 ### Volume definition for container
 RUN mkdir /root/HyperK/LinkToHost
