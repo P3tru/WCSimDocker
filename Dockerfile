@@ -50,9 +50,9 @@ RUN cd $HYPERKDIR \
 
 ### Downloading Geant4
 RUN cd $HYPERKDIR \
-    && wget http://geant4.web.cern.ch/geant4/support/source/lib4.10.1.p03/Linux-g++4.4.7-SLC6.tar.gz \
-    && tar -xvzf Linux-g++4.4.7-SLC6.tar.gz \
-    && rm -f Linux-g++4.4.7-SLC6.tar.gz
+    && wget https://pprc.qmul.ac.uk/~zsoldos/Geant4-10.1.3-Linux.tar.gz \
+    && tar -xvzf Geant4-10.1.3-Linux.tar.gz \
+    && rm -f Geant4-10.1.3-Linux.tar.gz
 
 ### Data files for Geant4
 ENV G4DATA $HYPERKDIR/Geant4-10.1.3-Linux/share/Geant4-10.1.3/data
